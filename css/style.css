@@ -1,0 +1,163 @@
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+* {
+    text-decoration-color: Black;
+}
+.header {
+    border: 1px solid black;
+    background-color: rgba(255, 240, 245, 0.85); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 10px;
+    position: relative;
+    z-index: 10;
+}
+section {
+    background-color: rgba(255, 240, 245, 0.8); 
+    margin: 15px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Mobile nav - hidden initially */
+nav .nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(255, 240, 245, 0.9); /* semi-transparent nav */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border: 1px solid black;
+    padding: 10px;
+    min-width: 120px;
+}
+
+/* Show nav when open */
+nav .nav.open {
+    display: flex;
+}
+
+/* Hamburger menu button */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Desktop / tablet */
+@media screen and (min-width: 768px) {
+    nav .nav {
+        display: flex !important;
+        flex-direction: row;
+        gap: 15px;
+        position: static;
+        border: none;
+        background: none;
+        margin-left: 750px;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
+}
+
+#ABOUT {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#projects {
+    justify-content: center;
+    text-align: center;
+}
+
+#pics {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* Remove the duplicate .nav styles that were causing issues */
+.nav {
+    list-style-type: none;
+    font-size: 15px;
+}
+
+a {
+    padding-left: 15px;
+}
+
+a:hover {
+    color: black;
+}
+
+.form {
+    border: 1px solid black;
+    padding: 10px;
+    align-items: center;
+    align-content: center;
+    background-color: rgba(255, 240, 245, 0.9); 
+    width: 180px;
+    height: 300px;
+    justify-content: center;
+}
+
+#button {
+    border: 1px solid black;
+    padding: 2px;
+}
+
+#button:hover {
+    color: lightpink;
+    background-color: white;
+}
+
+input {
+    padding: 5px;
+}
+
+.notification {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    text-align: center;
+    width: 200px;
+}
+
+.footer {
+    border: 1px solid black;
+    padding: 2px;
+    background-color: rgba(255, 240, 245, 0.85); /* semi-transparent */
+}
+
+#contactMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 5px;
+}
